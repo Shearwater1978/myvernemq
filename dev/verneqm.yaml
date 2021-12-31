@@ -135,7 +135,7 @@ spec:
   ports:
   - port: 1883
     name: mqtt
----
+#---
 apiVersion: v1
 kind: Service
 metadata:
@@ -143,7 +143,7 @@ metadata:
   labels:
     app: mqtts
 spec:
-  type: LoadBalancer
+  type: CLusterIP
   selector:
     app: vernemq
   ports:
